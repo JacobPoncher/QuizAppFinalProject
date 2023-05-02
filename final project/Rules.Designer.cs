@@ -28,47 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            linkLabel1 = new LinkLabel();
-            button1 = new Button();
+            rbxShowRules = new RichTextBox();
+            btnRules = new Button();
+            btnPolicy = new Button();
+            btnPenaltyGuide = new Button();
             SuspendLayout();
             // 
-            // linkLabel1
+            // rbxShowRules
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(128, 113);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(144, 20);
-            linkLabel1.TabIndex = 0;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "comprehensive rules";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            rbxShowRules.Location = new Point(4, 75);
+            rbxShowRules.Name = "rbxShowRules";
+            rbxShowRules.Size = new Size(795, 372);
+            rbxShowRules.TabIndex = 2;
+            rbxShowRules.Text = "";
             // 
-            // button1
+            // btnRules
             // 
-            button1.Location = new Point(62, 163);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnRules.Location = new Point(26, 19);
+            btnRules.Name = "btnRules";
+            btnRules.Size = new Size(94, 29);
+            btnRules.TabIndex = 3;
+            btnRules.Text = "rules";
+            btnRules.UseVisualStyleBackColor = true;
+            btnRules.Click += btnRules_Click;
+            // 
+            // btnPolicy
+            // 
+            btnPolicy.Location = new Point(244, 19);
+            btnPolicy.Name = "btnPolicy";
+            btnPolicy.Size = new Size(172, 29);
+            btnPolicy.TabIndex = 4;
+            btnPolicy.Text = "tournament guide";
+            btnPolicy.UseVisualStyleBackColor = true;
+            btnPolicy.Click += btnPolicy_Click;
+            // 
+            // btnPenaltyGuide
+            // 
+            btnPenaltyGuide.Location = new Point(524, 19);
+            btnPenaltyGuide.Name = "btnPenaltyGuide";
+            btnPenaltyGuide.Size = new Size(131, 29);
+            btnPenaltyGuide.TabIndex = 5;
+            btnPenaltyGuide.Text = "penalty guide";
+            btnPenaltyGuide.UseVisualStyleBackColor = true;
+            btnPenaltyGuide.Click += btnPenaltyGuide_Click;
             // 
             // lnkRules
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(linkLabel1);
+            Controls.Add(btnPenaltyGuide);
+            Controls.Add(btnPolicy);
+            Controls.Add(btnRules);
+            Controls.Add(rbxShowRules);
             Name = "lnkRules";
             Text = "Rules";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private LinkLabel linkLabel1;
-        private Button button1;
+        private RichTextBox rbxShowRules;
+        private Button btnRules;
+        private Button btnPolicy;
+        private Button btnPenaltyGuide;
     }
 }

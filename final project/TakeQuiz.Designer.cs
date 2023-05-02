@@ -42,6 +42,7 @@
             btnStart = new Button();
             gbxQuiz = new GroupBox();
             gpxChooseDifficulty = new GroupBox();
+            lblQuestionNum = new Label();
             gbxQuiz.SuspendLayout();
             gpxChooseDifficulty.SuspendLayout();
             SuspendLayout();
@@ -172,6 +173,7 @@
             // 
             // gbxQuiz
             // 
+            gbxQuiz.Controls.Add(lblQuestionNum);
             gbxQuiz.Controls.Add(btnFinish);
             gbxQuiz.Controls.Add(btnNext);
             gbxQuiz.Controls.Add(btnSubmit);
@@ -200,6 +202,14 @@
             gpxChooseDifficulty.TabIndex = 14;
             gpxChooseDifficulty.TabStop = false;
             gpxChooseDifficulty.Text = "choose difficulty ";
+            // 
+            // lblQuestionNum
+            // 
+            lblQuestionNum.AutoSize = true;
+            lblQuestionNum.Location = new Point(628, 357);
+            lblQuestionNum.Name = "lblQuestionNum";
+            lblQuestionNum.Size = new Size(0, 20);
+            lblQuestionNum.TabIndex = 10;
             // 
             // TakeQuiz
             // 
@@ -234,5 +244,6 @@
         private Button btnStart;
         private GroupBox gbxQuiz;
         private GroupBox gpxChooseDifficulty;
+        private Label lblQuestionNum;
     }
 }

@@ -20,6 +20,7 @@ namespace final_project
         {
             userDb = new UserContext();
             InitializeComponent();
+            
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

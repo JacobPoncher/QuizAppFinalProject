@@ -36,6 +36,7 @@
             txtPassword = new TextBox();
             lblUserName = new Label();
             lblPassword = new Label();
+            lblLoginError = new Label();
             SuspendLayout();
             // 
             // btnLogin
@@ -106,11 +107,20 @@
             lblPassword.Size = new Size(0, 20);
             lblPassword.TabIndex = 7;
             // 
+            // lblLoginError
+            // 
+            lblLoginError.AutoSize = true;
+            lblLoginError.Location = new Point(247, 271);
+            lblLoginError.Name = "lblLoginError";
+            lblLoginError.Size = new Size(0, 20);
+            lblLoginError.TabIndex = 8;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(845, 417);
+            Controls.Add(lblLoginError);
             Controls.Add(lblPassword);
             Controls.Add(lblUserName);
             Controls.Add(txtPassword);
@@ -121,6 +131,7 @@
             Controls.Add(btnLogin);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -136,5 +147,6 @@
         private TextBox txtPassword;
         private Label lblUserName;
         private Label lblPassword;
+        private Label lblLoginError;
     }
 }

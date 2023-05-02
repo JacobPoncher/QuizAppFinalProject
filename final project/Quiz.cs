@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace final_project
 {
@@ -13,6 +14,28 @@ namespace final_project
         private DateTime _date;
         private string _difficulty;
         
+
+
+
+        public bool CheckAnswer(string answer, string correctAnswer) 
+        {
+
+            if (correctAnswer != answer)
+            {
+
+                return false;
+            }
+            else if (correctAnswer == answer)
+            {
+                
+                return true;
+            }
+
+
+            return false;
+
+        }
+
 
 
 

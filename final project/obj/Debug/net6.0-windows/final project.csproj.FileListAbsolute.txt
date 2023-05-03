@@ -5,7 +5,6 @@ C:\Users\Jacob\Documents\GitHub\allawd1100coursework-jacobp203\Final Project\fin
 C:\Users\Jacob\Documents\GitHub\allawd1100coursework-jacobp203\Final Project\final code\final project\final project\bin\Debug\net6.0-windows\final project.pdb
 C:\Users\Jacob\Documents\GitHub\allawd1100coursework-jacobp203\Final Project\final code\final project\final project\obj\Debug\net6.0-windows\final project.csproj.AssemblyReference.cache
 C:\Users\Jacob\Documents\GitHub\allawd1100coursework-jacobp203\Final Project\final code\final project\final project\obj\Debug\net6.0-windows\final_project.CreateAccount.resources
-C:\Users\Jacob\Documents\GitHub\allawd1100coursework-jacobp203\Final Project\final code\final project\final project\obj\Debug\net6.0-windows\final_project.Form1.resources
 C:\Users\Jacob\Documents\GitHub\allawd1100coursework-jacobp203\Final Project\final code\final project\final project\obj\Debug\net6.0-windows\final project.csproj.GenerateResource.cache
 C:\Users\Jacob\Documents\GitHub\allawd1100coursework-jacobp203\Final Project\final code\final project\final project\obj\Debug\net6.0-windows\final project.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Jacob\Documents\GitHub\allawd1100coursework-jacobp203\Final Project\final code\final project\final project\obj\Debug\net6.0-windows\final project.AssemblyInfoInputs.cache
@@ -65,3 +64,4 @@ C:\Users\Jacob\Documents\GitHub\allawd1100coursework-jacobp203\Final Project\fin
 C:\Users\Jacob\Documents\GitHub\allawd1100coursework-jacobp203\Final Project\final code\final project\final project\obj\Debug\net6.0-windows\final project.csproj.CopyComplete
 C:\Users\Jacob\Documents\GitHub\allawd1100coursework-jacobp203\Final Project\final code\final project\final project\obj\Debug\net6.0-windows\final_project.ChooseDifficulty.resources
 C:\Users\Jacob\Documents\GitHub\allawd1100coursework-jacobp203\Final Project\final code\final project\final project\obj\Debug\net6.0-windows\final_project.lnkRules.resources
+C:\Users\Jacob\Documents\GitHub\allawd1100coursework-jacobp203\Final Project\final code\final project\final project\obj\Debug\net6.0-windows\final_project.Login.resources

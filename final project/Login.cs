@@ -1,12 +1,12 @@
 namespace final_project
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         UserContext userDb;
         List<UserAccount> userAccounts;
         UserAccount currentUser;
 
-        public Form1()
+        public Login()
         {
             userDb = new UserContext();
             InitializeComponent();
@@ -20,13 +20,13 @@ namespace final_project
             CAccount.ShowDialog();
         }
 
-        private bool Login(string enteredUsername, string enteredPassword) 
+        private bool UserLogin(string enteredUsername, string enteredPassword) 
         {
             userAccounts = userDb.Users.Select(u => u).ToList();
             bool loggedIn = false;
             foreach (UserAccount account in userAccounts)
             {
-                if (enteredUsername == account.UserName && enteredPassword == account.Password)
+                if (enteredUsername.ToLower() == account.UserName.ToLower() && enteredPassword == account.Password)
                 {
                     currentUser = account;
                     
@@ -36,7 +36,11 @@ namespace final_project
 
 
             }
-
+            if (loggedIn == false )
+                {
+                throw new InvalidLoginException("incorrect username or password");
+           
+            }
 
 
             return loggedIn;
@@ -49,14 +53,16 @@ namespace final_project
             string enteredUsername = txtUserName.Text;
             string enteredPassword = txtPassword.Text;
 
-            if (Login(enteredUsername, enteredPassword)) 
-            {
-                Form HomeScreen = new HomeScreen(currentUser);
-                HomeScreen.Show();
+            
                 
-
+             try
+            {
+                UserLogin(enteredUsername, enteredPassword);
             }
-            else { lblLoginError.Text = "incorrect username or password"; }
+            catch (InvalidLoginException ex) 
+            {
+                lblLoginError.Text = ex.Message;
+            }
 
 
            

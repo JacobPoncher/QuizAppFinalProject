@@ -105,7 +105,7 @@ namespace final_project
             rbtQuestion2.Text = thisQuiz.Questions[currentquestion].Answer2.ToString();
             rbtQuestion3.Text = thisQuiz.Questions[currentquestion].Answer3.ToString();
             rbtquestion4.Text = thisQuiz.Questions[currentquestion].Answer4.ToString();
-            lblQuestionNum.Text = $"{currentquestion+1}/{thisQuiz.Questions.Count}";
+            lblQuestionNum.Text = $"{currentquestion + 1}/{thisQuiz.Questions.Count}";
 
 
         }
@@ -120,7 +120,7 @@ namespace final_project
             rbtQuestion3.Text = thisQuiz.Questions[currentquestion].Answer3.ToString();
             rbtquestion4.Text = thisQuiz.Questions[currentquestion].Answer4.ToString();
 
-            lblQuestionNum.Text = $"{currentquestion+1}/{ thisQuiz.Questions.Count}";
+            lblQuestionNum.Text = $"{currentquestion + 1}/{thisQuiz.Questions.Count}";
             lblResult.Text = string.Empty;
 
 
@@ -143,8 +143,8 @@ namespace final_project
 
             }
             else { lblResult.Text = "please answer the question"; }
-            
-            
+
+
 
             if (currentquestion == thisQuiz.Questions.Count)
             {
@@ -172,7 +172,7 @@ namespace final_project
             else if (rbtquestion4.Checked) answer = rbtquestion4.Text;
             questionAnswered = true;
 
-            if (thisQuiz.CheckAnswer(answer,correctAnswer) == false)
+            if (thisQuiz.CheckAnswer(answer, correctAnswer) == false)
             {
 
                 lblResult.Text = "incorrect";

@@ -15,20 +15,55 @@ namespace final_project
     public partial class CreateAccount : Form
     {
         UserContext userDb;
-        Form LoginScreen = new Form1();
+        Form LoginScreen = new Login();
+        List<UserAccount> userAccounts;
         public CreateAccount()
         {
             userDb = new UserContext();
             InitializeComponent();
-            
+
+        }
+        private bool CheckUserName(string enteredUserName)
+        {
+            bool usernameUsed = false;
+
+            userAccounts = userDb.Users.Select(u => u).ToList();
+            for (int i = 0; i < userAccounts.Count; i++)
+            {
+                if (userAccounts[i].UserName == enteredUserName)
+                {
+
+                    usernameUsed = true;
+
+
+
+                }
+
+
+
+            }
+
+
+
+            return usernameUsed;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            UserAccount addAccount = new UserAccount() { UserName = txtUsername.Text, Password = txtPassword.Text ,LastScore = 0, Scores = ""};
+            string enteredUserName = txtUsername.Text;
 
-            userDb.Users.Add(addAccount);
-            userDb.SaveChanges();
+            UserAccount addAccount = new UserAccount() { UserName = txtUsername.Text, Password = txtPassword.Text, LastScore = 0, Scores = "" };
+            if (CheckUserName(enteredUserName))
+            {
+                lblUserError.Text = "username already taken";
+
+
+            }
+            else
+            {
+                userDb.Users.Add(addAccount);
+                userDb.SaveChanges();
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)

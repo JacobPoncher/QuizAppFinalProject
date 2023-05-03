@@ -34,6 +34,7 @@
             label1 = new Label();
             label2 = new Label();
             btnBack = new Button();
+            lblUserError = new Label();
             SuspendLayout();
             // 
             // btnRegister
@@ -88,11 +89,20 @@
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
+            // lblUserError
+            // 
+            lblUserError.AutoSize = true;
+            lblUserError.Location = new Point(364, 69);
+            lblUserError.Name = "lblUserError";
+            lblUserError.Size = new Size(0, 20);
+            lblUserError.TabIndex = 6;
+            // 
             // CreateAccount
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblUserError);
             Controls.Add(btnBack);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -113,5 +123,6 @@
         private Label label1;
         private Label label2;
         private Button btnBack;
+        private Label lblUserError;
     }
 }

@@ -10,7 +10,7 @@ namespace final_project
         {
             userDb = new UserContext();
             InitializeComponent();
-           
+
 
         }
 
@@ -20,7 +20,7 @@ namespace final_project
             CAccount.ShowDialog();
         }
 
-        private bool UserLogin(string enteredUsername, string enteredPassword) 
+        private bool UserLogin(string enteredUsername, string enteredPassword)
         {
             userAccounts = userDb.Users.Select(u => u).ToList();
             bool loggedIn = false;
@@ -29,17 +29,17 @@ namespace final_project
                 if (enteredUsername.ToLower() == account.UserName.ToLower() && enteredPassword == account.Password)
                 {
                     currentUser = account;
-                    
-                    return loggedIn= true;
+
+                    return loggedIn = true;
                 }
 
 
 
             }
-            if (loggedIn == false )
-                {
+            if (loggedIn == false)
+            {
                 throw new InvalidLoginException("incorrect username or password");
-           
+
             }
 
 
@@ -53,24 +53,25 @@ namespace final_project
             string enteredUsername = txtUserName.Text;
             string enteredPassword = txtPassword.Text;
 
-            
-                
-             try
+
+
+            try
             {
                 UserLogin(enteredUsername, enteredPassword);
             }
-            catch (InvalidLoginException ex) 
+            catch (InvalidLoginException ex)
             {
                 lblLoginError.Text = ex.Message;
             }
 
 
-           
 
 
 
 
 
+            Form HomeScreen = new HomeScreen(currentUser);
+            HomeScreen.ShowDialog();
 
 
         }

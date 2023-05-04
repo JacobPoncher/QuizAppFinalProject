@@ -86,8 +86,8 @@ namespace final_project
 
 
             }
-            
 
+            lblLastScore.Text = currentUser.LastScore.ToString();
 
         }
 

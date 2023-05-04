@@ -246,9 +246,9 @@ namespace final_project
             lblResult.Text = $"{score}/{thisQuiz.Questions.Count}   {thisQuiz.Difficulty}    {thisQuiz.Date};";
 
             string finishedScore = lblResult.Text;
-            int lastScore = score / thisQuiz.Questions.Count;
+            int   lastScore = score;
             UpdateScores(finishedScore, lastScore);
-
+            btnFinish.Visible = false;
 
 
 

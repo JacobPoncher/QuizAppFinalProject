@@ -30,6 +30,8 @@
         {
             lblScores = new Label();
             label1 = new Label();
+            label2 = new Label();
+            lblLastScore = new Label();
             SuspendLayout();
             // 
             // lblScores
@@ -50,11 +52,30 @@
             label1.Text = "Past scores ";
             label1.Click += label1_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(560, 20);
+            label2.Name = "label2";
+            label2.Size = new Size(80, 20);
+            label2.TabIndex = 2;
+            label2.Text = "Last Score ";
+            // 
+            // lblLastScore
+            // 
+            lblLastScore.AutoSize = true;
+            lblLastScore.Location = new Point(565, 61);
+            lblLastScore.Name = "lblLastScore";
+            lblLastScore.Size = new Size(0, 20);
+            lblLastScore.TabIndex = 3;
+            // 
             // Scores
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(956, 520);
+            Controls.Add(lblLastScore);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lblScores);
             Name = "Scores";
@@ -68,5 +89,7 @@
 
         public Label lblScores;
         private Label label1;
+        private Label label2;
+        private Label lblLastScore;
     }
 }
